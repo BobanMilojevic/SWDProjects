@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cpHC0ZE+6O4Syd9Df4rJuLIiBtzurq4g23pUx4mNsnj8B1OhldQhMKv6wanxgE3T5q0VAN2sPgITfl6f+jxztw==",
+  "dgSpecHash": "A3wmuh+T+DrxuSDaGnl3xlbAleeUN71CNkAOvhlTxBAsFaelBShRvOwDiX9jRBzalU9GNXHGXi6NWE83DhmcaQ==",
   "success": true,
-  "projectFilePath": "C:\\SwDeveloper2022\\SWDProjects\\SWD.PlayCollector\\Swd.PlayCollector.Migrations\\Swd.PlayCollector.Migrations.csproj",
+  "projectFilePath": "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Migrations\\Swd.PlayCollector.Migrations.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\STEA B.Milojevic\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\STEA B.Milojevic\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

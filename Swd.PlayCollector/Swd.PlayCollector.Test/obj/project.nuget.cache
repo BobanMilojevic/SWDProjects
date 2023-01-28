@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jUMkquKwaeFLF1IROduXhTymypFHFIyqr0ggy/ZRBePNLyDwVn/uUgQDA3g/yfN1cMl9GLSzVZqBe2CNsfmp2g==",
+  "dgSpecHash": "rdJzse74IzgfF1vfkW9rGyp29CnMojNMIZhgWKr424qxccPABHYnpueRUm9YUlilhHLrJP4nrqF3Moj5PLF5uw==",
   "success": true,
-  "projectFilePath": "C:\\SwDeveloper2022\\SWDProjects\\SWD.PlayCollector\\Swd.PlayCollector.Test\\Swd.PlayCollector.Test.csproj",
+  "projectFilePath": "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Test\\Swd.PlayCollector.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\STEA B.Milojevic\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\STEA B.Milojevic\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
