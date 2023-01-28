@@ -1,0 +1,14 @@
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\bin\Debug\net6.0\Swd.PlayCollectorTest.deps.json
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\bin\Debug\net6.0\Swd.PlayCollectorTest.runtimeconfig.json
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\bin\Debug\net6.0\Swd.PlayCollectorTest.dll
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\bin\Debug\net6.0\Swd.PlayCollectorTest.pdb
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.csproj.AssemblyReference.cache
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.AssemblyInfoInputs.cache
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.AssemblyInfo.cs
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.csproj.CoreCompileInputs.cache
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.dll
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\refint\Swd.PlayCollectorTest.dll
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.pdb
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\Swd.PlayCollectorTest.genruntimeconfig.cache
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollectorTest\Swd.PlayCollectorTest\obj\Debug\net6.0\ref\Swd.PlayCollectorTest.dll
