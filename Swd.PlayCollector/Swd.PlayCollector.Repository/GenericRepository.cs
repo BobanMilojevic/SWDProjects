@@ -32,31 +32,49 @@ public class GenericRepository<TEntity, TModel> : IGenericRepository<TEntity>
         _dbContext = context;
         _dbSet = context.Set<TEntity>();
     }
-    
-    
+
     public void Add(TEntity t)
     {
-        throw new NotImplementedException();
+        _dbSet.Add(t);
+        _dbContext.SaveChanges();
     }
 
-    public Task AddAsync(TEntity t)
+    public async Task AddAsync(TEntity t)
     {
-        throw new NotImplementedException();
+        await _dbSet.AddAsync(t);
+        await _dbContext.SaveChangesAsync();
     }
 
     public IQueryable<TEntity> GetAll()
     {
-        throw new NotImplementedException();
+        return _dbSet.AsQueryable();
     }
 
-    public Task<IQueryable<TEntity>> GettAllAsync()
+    public Task<IQueryable<TEntity>> GetAllAsync()
     {
         throw new NotImplementedException();
     }
+
+    public TEntity GetById(object key)
+    {
+        return _dbSet.Find(key);
+    }
+
+    public Task<TEntity> GetByIdAsync(object key)
+    {
+        throw new NotImplementedException();
+    }
+    
 
     public void Update(TEntity t, object key)
     {
-        throw new NotImplementedException();
+        TEntity existing = _dbSet.Find(key);
+        if (existing != null)
+        {
+            _dbContext.Entry(existing).CurrentValues.SetValues(t);
+            _dbContext.SaveChanges();
+            _dbContext.Entry(existing).Reload();
+        }
     }
 
     public Task UpdateAsync(TEntity t, object key)
@@ -66,7 +84,12 @@ public class GenericRepository<TEntity, TModel> : IGenericRepository<TEntity>
 
     public void Delete(object key)
     {
-        throw new NotImplementedException();
+        TEntity existing = _dbSet.Find(key);
+        if (existing != null)
+        {
+            _dbSet.Remove(existing);
+            _dbContext.SaveChanges();
+        }
     }
 
     public Task DeleteAsync(object key)

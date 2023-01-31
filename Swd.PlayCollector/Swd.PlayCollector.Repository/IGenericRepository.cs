@@ -13,7 +13,11 @@ public interface IGenericRepository<TEntity> where TEntity : class, new()
     
     // Read
     IQueryable<TEntity> GetAll();
-    Task<IQueryable<TEntity>> GettAllAsync();
+    Task<IQueryable<TEntity>> GetAllAsync();
+    
+    // ReadById
+    TEntity GetById(object key);
+    Task<TEntity> GetByIdAsync(object key);
     
     // Update
     void Update(TEntity t, object key);
