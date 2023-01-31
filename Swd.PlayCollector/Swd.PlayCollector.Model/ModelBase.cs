@@ -1,9 +1,18 @@
-﻿namespace Swd.PlayCollector.Model;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Swd.PlayCollector.Model;
 
 public class ModelBase
 {
+    [MaxLength(25)]
     public string CreatedBy { get; set; }
-    public string UpdatedBy { get; set; }
+    
+    [MaxLength(25)]
+    public string? UpdatedBy { get; set; }
+    
     public DateTime CreatedDate { get; set; }
-    public DateTime UpdatedDate { get; set; }
+    
+    
+    public DateTime? UpdatedDate { get; set; }
 }

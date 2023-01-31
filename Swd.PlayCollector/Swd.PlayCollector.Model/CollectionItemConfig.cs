@@ -16,7 +16,7 @@ public class CollectionItemConfig : IEntityTypeConfiguration<CollectionItem>
             .HasComment("Name of collection item");
         
         entity.Property(m => m.Number)
-            .IsRequired()
+            .IsRequired(false)
             .HasColumnType("nvarchar(25)")
             .HasComment("Number of collection item");
         
