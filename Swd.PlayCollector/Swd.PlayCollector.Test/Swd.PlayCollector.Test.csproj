@@ -16,4 +16,9 @@
         <PackageReference Include="coverlet.collector" Version="3.1.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Swd.PlayCollector.Model\Swd.PlayCollector.Model.csproj" />
+      <ProjectReference Include="..\Swd.PlayCollector.Repository\Swd.PlayCollector.Repository.csproj" />
+    </ItemGroup>
+
 </Project>

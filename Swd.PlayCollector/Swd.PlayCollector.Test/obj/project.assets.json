@@ -2594,6 +2594,33 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Swd.PlayCollector.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
+        },
+        "compile": {
+          "bin/placeholder/Swd.PlayCollector.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Swd.PlayCollector.Model.dll": {}
+        }
+      },
+      "Swd.PlayCollector.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "Swd.PlayCollector.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Swd.PlayCollector.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Swd.PlayCollector.Repository.dll": {}
+        }
       }
     }
   },
@@ -8555,6 +8582,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Swd.PlayCollector.Model/1.0.0": {
+      "type": "project",
+      "path": "../Swd.PlayCollector.Model/Swd.PlayCollector.Model.csproj",
+      "msbuildProject": "../Swd.PlayCollector.Model/Swd.PlayCollector.Model.csproj"
+    },
+    "Swd.PlayCollector.Repository/1.0.0": {
+      "type": "project",
+      "path": "../Swd.PlayCollector.Repository/Swd.PlayCollector.Repository.csproj",
+      "msbuildProject": "../Swd.PlayCollector.Repository/Swd.PlayCollector.Repository.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8563,6 +8600,8 @@
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
+      "Swd.PlayCollector.Model >= 1.0.0",
+      "Swd.PlayCollector.Repository >= 1.0.0",
       "coverlet.collector >= 3.1.2"
     ]
   },
@@ -8598,7 +8637,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Model\\Swd.PlayCollector.Model.csproj": {
+              "projectPath": "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Model\\Swd.PlayCollector.Model.csproj"
+            },
+            "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Repository\\Swd.PlayCollector.Repository.csproj": {
+              "projectPath": "C:\\SwDeveloper2022\\SWDProjects\\Swd.PlayCollector\\Swd.PlayCollector.Repository\\Swd.PlayCollector.Repository.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
