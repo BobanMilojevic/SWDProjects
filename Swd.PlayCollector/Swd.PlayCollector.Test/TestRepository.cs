@@ -12,7 +12,8 @@ public class TestRepository
         CollectionItem item = new CollectionItem();
         item.Name = "TestItem";
         item.CreatedDate = DateTime.Now;
-        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+        item.CreatedBy = "User";
+        //item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
         CollectionItemRepository repo = new CollectionItemRepository();
         repo.Add(item);
