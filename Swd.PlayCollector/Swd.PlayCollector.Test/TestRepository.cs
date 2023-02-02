@@ -1,3 +1,6 @@
+using System.Data;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using Swd.PlayCollector.Model;
 using Swd.PlayCollector.Repository;
 
@@ -6,6 +9,11 @@ namespace Swd.PlayCollector.Test;
 [TestClass]
 public class TestRepository
 {
+    public TestRepository()
+    {
+        EmptyDatabase();
+    }
+    
     [TestMethod]
     public void Add_CollectionItem()
     {
@@ -132,5 +140,26 @@ public class TestRepository
         
         int itemCount = repo.GetAll().Count();
         Assert.AreNotEqual(0,itemCount);
+    }
+
+
+    public static void EmptyDatabase()
+    {
+        PlayCollectorContext testContext = new PlayCollectorContext();
+
+        var command = testContext.Database.GetDbConnection().CreateCommand();
+        command.CommandText = "spEmptyDatabase";
+        command.CommandType = System.Data.CommandType.StoredProcedure;
+        
+        // Beispiel für einen Parameter der an die SP übergeben wird
+        //command.Parameters.Add(new SqlParameter("parametername", "parametervalue"));
+        
+        testContext.Database.OpenConnection();
+        command.ExecuteNonQuery();
+        
+        //Beispiel um Rückgabewerte zu verarbeiten
+        /*var result = command.ExecuteReader();
+        var dataTable = new DataTable();
+        dataTable.Load(result);*/
     }
 }
