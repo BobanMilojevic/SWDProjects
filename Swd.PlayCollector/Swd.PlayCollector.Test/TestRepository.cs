@@ -11,7 +11,7 @@ public class TestRepository
 {
     public TestRepository()
     {
-        EmptyDatabase();
+        //EmptyDatabase();
     }
     
     [TestMethod]
