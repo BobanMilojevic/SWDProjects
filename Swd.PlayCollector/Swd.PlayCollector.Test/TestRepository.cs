@@ -17,11 +17,7 @@ public class TestRepository
     [TestMethod]
     public void Add_CollectionItem()
     {
-        CollectionItem item = new CollectionItem();
-        item.Name = "TestItem";
-        item.CreatedDate = DateTime.Now;
-        item.CreatedBy = "User";
-        //item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+        CollectionItem item = GetCollectionItem();
 
         CollectionItemRepository repo = new CollectionItemRepository();
         repo.Add(item);
@@ -32,10 +28,7 @@ public class TestRepository
     [TestMethod]
     public async Task Add_CollectionItemAsync()
     {
-        CollectionItem item = new CollectionItem();
-        item.Name = "TestItem";
-        item.CreatedDate = DateTime.Now;
-        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+        CollectionItem item = GetCollectionItem();
 
         CollectionItemRepository repo = new CollectionItemRepository();
         await repo.AddAsync(item);
@@ -49,11 +42,8 @@ public class TestRepository
     [DataRow(10.0)]
     public void Add_CollectionItemWithPrice(double price)
     {
-        CollectionItem item = new CollectionItem();
-        item.Name = "TestItem";
+        CollectionItem item = GetCollectionItem();
         item.Price = Convert.ToDecimal(price);
-        item.CreatedDate = DateTime.Now;
-        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
         CollectionItemRepository repo = new CollectionItemRepository();
         repo.Add(item);
@@ -93,13 +83,9 @@ public class TestRepository
     public void Update_CollectionItem()
     {
         CollectionItemRepository repo = new CollectionItemRepository();
-        
-        CollectionItem item = new CollectionItem();
-        string itemName = "TestItem";
-        item.Name = itemName;
-        item.CreatedDate = DateTime.Now;
-        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
-        
+        CollectionItem item = GetCollectionItem();
+
+        string itemName = item.Name;
         repo.Add(item);
 
         CollectionItem addedItem = repo.GetById(item.Id);
@@ -112,15 +98,28 @@ public class TestRepository
     }
     
     [TestMethod]
+    public async Task Update_CollectionItemAsync()
+    {
+        CollectionItemRepository repo = new CollectionItemRepository();
+        CollectionItem item = GetCollectionItem();
+
+        string itemName = item.Name;
+        await repo.AddAsync(item);
+
+        CollectionItem addedItem = repo.GetById(item.Id);
+        addedItem.Name = string.Format("TestItem{0}", DateTime.Now);
+        await repo.UpdateAsync(addedItem, addedItem.Id);
+
+        CollectionItem updateItem = repo.GetById(item.Id);
+        
+        Assert.AreNotEqual(itemName, updateItem.Name);
+    }
+    
+    [TestMethod]
     public void Delete_CollectionItem()
     {
         CollectionItemRepository repo = new CollectionItemRepository();
-        
-        CollectionItem item = new CollectionItem();
-        string itemName = "TestItem";
-        item.Name = itemName;
-        item.CreatedDate = DateTime.Now;
-        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+        CollectionItem item = GetCollectionItem();
         
         repo.Add(item);
         repo.Delete(item.Id);
@@ -131,17 +130,41 @@ public class TestRepository
     }
     
     [TestMethod]
-    public void GetAll_CollectionItem()
+    public async Task Delete_CollectionItemAsync()
     {
         CollectionItemRepository repo = new CollectionItemRepository();
+        CollectionItem item = GetCollectionItem();
+        
+        await repo.AddAsync(item);
+        await repo.DeleteAsync(item.Id);
+        
+        CollectionItem deletedItem = repo.GetById(item.Id);
 
-        var items = repo.GetAll();
-        var items2 = repo.GetAll().ToList();
+        Assert.IsNull(deletedItem);
+    }
+    
+    [TestMethod]
+    public void GetAll_CollectionItem()
+    {
+        CollectionItem item = GetCollectionItem();
+        
+        CollectionItemRepository repo = new CollectionItemRepository();
+        repo.Add(item);
         
         int itemCount = repo.GetAll().Count();
         Assert.AreNotEqual(0,itemCount);
     }
 
+
+    private static CollectionItem GetCollectionItem()
+    {
+        CollectionItem item = new CollectionItem();
+        item.Name = "TestItem";
+        item.CreatedDate = DateTime.Now;
+        item.CreatedBy = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+
+        return item;
+    }
 
     public static void EmptyDatabase()
     {
