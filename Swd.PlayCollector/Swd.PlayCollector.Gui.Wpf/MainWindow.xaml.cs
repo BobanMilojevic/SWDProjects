@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.EntityFrameworkCore;
+using Swd.PlayCollector.Business;
 
 namespace Swd.PlayCollector.Gui.Wpf
 {
@@ -23,6 +25,12 @@ namespace Swd.PlayCollector.Gui.Wpf
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void btnLoadData_OnClick(object sender, RoutedEventArgs e)
+        {
+            CollectionItemService service = new CollectionItemService();
+            this.grdCollectionItems.ItemsSource = await service.GetAllAsync().Result.ToListAsync();
         }
     }
 }

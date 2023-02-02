@@ -50,9 +50,9 @@ public class GenericRepository<TEntity, TModel> : IGenericRepository<TEntity>
         return _dbSet.AsQueryable();
     }
 
-    public Task<IQueryable<TEntity>> GetAllAsync()
+    public async Task<IQueryable<TEntity>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        return _dbSet.AsQueryable();
     }
 
     public TEntity GetById(object key)
@@ -77,9 +77,15 @@ public class GenericRepository<TEntity, TModel> : IGenericRepository<TEntity>
         }
     }
 
-    public Task UpdateAsync(TEntity t, object key)
+    public async Task UpdateAsync(TEntity t, object key)
     {
-        throw new NotImplementedException();
+        TEntity existing = await _dbSet.FindAsync(key);
+        if (existing != null)
+        {
+            _dbContext.Entry(existing).CurrentValues.SetValues(t);
+            await _dbContext.SaveChangesAsync();
+            await _dbContext.Entry(existing).ReloadAsync();
+        }
     }
 
     public void Delete(object key)
@@ -92,8 +98,13 @@ public class GenericRepository<TEntity, TModel> : IGenericRepository<TEntity>
         }
     }
 
-    public Task DeleteAsync(object key)
+    public async Task DeleteAsync(object key)
     {
-        throw new NotImplementedException();
+        TEntity existing = await _dbSet.FindAsync(key);
+        if (existing != null)
+        {
+            _dbSet.Remove(existing);
+            await _dbContext.SaveChangesAsync();
+        }
     }
 }
