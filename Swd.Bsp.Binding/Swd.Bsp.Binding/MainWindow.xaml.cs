@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -27,10 +28,16 @@ namespace Swd.Bsp.Binding
 
         private void btnBasicBinding_Click(object sender, RoutedEventArgs e)
         {
-            fBasicBinding f = new fBasicBinding();
+            // Variante 2: Konstruktor
+            fBasicBinding f = new fBasicBinding(this);
             f.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             f.Width = 1200;
             f.Height = 900;
+            
+            // Variante 1: Öffentliche Eigenschaft
+            //f.CallerWindow = this;
+
+            this.Hide();
             f.Show();
         }
     }
