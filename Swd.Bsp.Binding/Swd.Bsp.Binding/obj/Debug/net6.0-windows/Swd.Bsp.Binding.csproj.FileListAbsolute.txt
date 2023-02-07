@@ -21,3 +21,6 @@ C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\Swd.Bsp.Binding.pdb
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\Swd.Bsp.Binding.genruntimeconfig.cache
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\ref\Swd.Bsp.Binding.dll
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\bin\Debug\net6.0-windows\Resources\Oma.jpg
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fObjectBinding.g.cs
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fObjectBinding.baml

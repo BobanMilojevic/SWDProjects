@@ -15,6 +15,41 @@
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
         
-        <Button x:Name="btnBack" Grid.Row="4" Content="Back" Click="BtnBack_OnClick"/>
+        <Slider x:Name="sliFontSize"
+                Grid.Row="0"
+                VerticalAlignment="Center"
+                Minimum="10"
+                Maximum="80"
+                Value="30"/>
+        <Slider x:Name="sliRotation"
+                Grid.Row="1"
+                VerticalAlignment="Center"
+                Minimum="0"
+                Maximum="360"
+                Value="0"/>
+        
+        <TextBlock x:Name="txbText"
+                   Grid.Row="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="Anzeigetext"
+                   FontSize="{Binding Value, ElementName=sliFontSize}"
+                   RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="{Binding Value, ElementName=sliRotation}"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        
+        <TextBox Grid.Row="3"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 Text="{Binding Value, ElementName=sliFontSize}"/>
+        
+        <Button x:Name="btnBack" 
+                Grid.Row="4" 
+                Content="Back" 
+                Click="BtnBack_OnClick"/>
     </Grid>
 </Window>

@@ -40,5 +40,20 @@ namespace Swd.Bsp.Binding
             this.Hide();
             f.Show();
         }
+
+        private void BtnObjectBinding_Click(object sender, RoutedEventArgs e)
+        {
+            // Variante 2: Konstruktor
+            fObjectBinding f = new fObjectBinding(this);
+            f.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            f.Width = 1200;
+            f.Height = 900;
+            
+            // Variante 1: Öffentliche Eigenschaft
+            //f.CallerWindow = this;
+
+            this.Hide();
+            f.Show();
+        }
     }
 }

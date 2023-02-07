@@ -25,7 +25,25 @@
             <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="1" Grid.Column="1" Content="Basic Binding" x:Name="btnBasicBinding" Click="btnBasicBinding_Click"/>
+        <Button x:Name="btnBasicBinding"  
+                Grid.Row="1" 
+                Grid.Column="1" 
+                Click="btnBasicBinding_Click">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Basic Button" VerticalAlignment="Center"/>
+                <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="btnObjectBinding"  
+                Grid.Row="1" 
+                Grid.Column="2" 
+                Click="BtnObjectBinding_Click">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Basic Button" VerticalAlignment="Center"/>
+                <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
+            </StackPanel>
+        </Button>
     </Grid>
     
 </Window>

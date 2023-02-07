@@ -23,10 +23,9 @@ public partial class fBasicBinding : Window
         InitializeComponent();
     }
     
-    public fBasicBinding(Window callerWindows)
+    public fBasicBinding(Window callerWindows) : this()
     {
         _callerWindow = callerWindows;
-        InitializeComponent();
     }
 
     private void BtnBack_OnClick(object sender, RoutedEventArgs e)
