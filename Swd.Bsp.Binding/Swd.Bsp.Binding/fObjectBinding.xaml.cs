@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Data.Common;
+using System.Windows;
 
 namespace Swd.Bsp.Binding;
 
@@ -27,5 +28,11 @@ public partial class fObjectBinding : Window
     public fObjectBinding(Window callerWindows) : this()
     {
         _callerWindow = callerWindows;
+    }
+
+    private void BtnGetCustomer_OnClick(object sender, RoutedEventArgs e)
+    {
+        Customer c = new Customer { Id = 1, Name = "Boban", Email = "boban@milojevic.at", PhoneNumber = "06604897138" };
+        this.DataContext = c;
     }
 }
