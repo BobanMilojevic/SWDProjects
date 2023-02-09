@@ -40,7 +40,27 @@
                 Grid.Column="2" 
                 Click="BtnObjectBinding_Click">
             <StackPanel Orientation="Horizontal">
-                <Label Content="Basic Button" VerticalAlignment="Center"/>
+                <Label Content="Object Binding" VerticalAlignment="Center"/>
+                <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="btnCollectionBinding"  
+                Grid.Row="2" 
+                Grid.Column="1" 
+                Click="BtnCollectionBinding_OnClick">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Collection Binding" VerticalAlignment="Center"/>
+                <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
+            </StackPanel>
+        </Button>
+        
+        <Button x:Name="btnTemplates"  
+                Grid.Row="2" 
+                Grid.Column="2" 
+                Click="BtnTemplates_OnClick">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Templates" VerticalAlignment="Center"/>
                 <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
             </StackPanel>
         </Button>

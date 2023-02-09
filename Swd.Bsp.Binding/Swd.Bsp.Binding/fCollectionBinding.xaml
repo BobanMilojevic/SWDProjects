@@ -1,0 +1,32 @@
+﻿<Window x:Class="Swd.Bsp.Binding.fCollectionBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Swd.Bsp.Binding"
+        mc:Ignorable="d"
+        Title="fCollectionBinding" Height="450" Width="800">
+    
+    <DockPanel>
+        <ListBox x:Name="lstCustomer"
+                 MinWidth="200"
+                 MinHeight="300"
+                 Margin="5"
+                 DisplayMemberPath="Name"
+                 IsSynchronizedWithCurrentItem="True"></ListBox>
+        
+        <ComboBox x:Name="cbxCustomer"
+                  MinWidth="200"
+                  Margin="5"
+                  VerticalAlignment="Top"
+                  ItemsSource="{Binding }"
+                  DisplayMemberPath="Name"
+                  IsSynchronizedWithCurrentItem="True"></ComboBox>
+        
+        <Button Content="Add Customer"
+                Margin="5"
+                VerticalAlignment="Top"
+                Click="ButtonBase_OnClick"/>
+    </DockPanel>
+    
+</Window>
