@@ -46,7 +46,12 @@ public partial class fTemplates : Window
             new Customer{ Id = 2, Name = "Boban1", Email = "boban@milojevic.at", PhoneNumber = "06604897138" },
             new Customer{ Id = 3, Name = "Boban2", Email = "boban@milojevic.at", PhoneNumber = "06604897138" }
         };
-        
-        this.DataContext = _customerList;
+
+        lstCustomer.ItemsSource = CustomerList;
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    {
+        MessageBox.Show($"Rufe folgende Nummer an {(lstCustomer.SelectedItem as Customer).PhoneNumber}");
     }
 }

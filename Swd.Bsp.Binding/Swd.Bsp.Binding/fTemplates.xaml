@@ -6,6 +6,40 @@
         xmlns:local="clr-namespace:Swd.Bsp.Binding"
         mc:Ignorable="d"
         Title="fTemplates" Height="450" Width="800">
-        
-        
+    <Window.Resources>
+        <DataTemplate x:Key="CustomerTemplate">
+            <Border BorderBrush="Green" 
+                    BorderThickness="1">
+                <DockPanel>
+                    <Button Content="Dial"
+                            FontSize="20"
+                            Width="50"
+                            BorderThickness="0"
+                            Margin="3"
+                            Click="ButtonBase_OnClick"/>
+                    <StackPanel Margin="5">
+                        <TextBlock Foreground="Red" 
+                                   FontSize="20"
+                                   TextAlignment="Left"
+                                   Text="{Binding Name}"/>
+                        <TextBlock Foreground="Black" 
+                                   FontSize="12"
+                                   TextAlignment="Left"
+                                   Text="{Binding Email}"/>
+                    </StackPanel>
+                </DockPanel>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>    
+    
+        <StackPanel>
+                <ListBox x:Name="lstCustomer"
+                         ItemTemplate="{DynamicResource ResourceKey=CustomerTemplate}"
+                         Margin="10"
+                         Background="LightGray"
+                         Height="400"
+                         HorizontalContentAlignment="Stretch">
+                        
+                </ListBox>
+        </StackPanel>
 </Window>
