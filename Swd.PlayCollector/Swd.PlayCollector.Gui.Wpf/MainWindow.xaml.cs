@@ -26,11 +26,5 @@ namespace Swd.PlayCollector.Gui.Wpf
         {
             InitializeComponent();
         }
-
-        private async void btnLoadData_OnClick(object sender, RoutedEventArgs e)
-        {
-            CollectionItemService service = new CollectionItemService();
-            this.grdCollectionItems.ItemsSource = await service.GetAllAsync().Result.ToListAsync();
-        }
     }
 }
