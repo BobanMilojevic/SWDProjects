@@ -85,5 +85,20 @@ namespace Swd.Bsp.Binding
             //this.Hide();
             f.Show();
         }
+
+        private void BtnForeCast_OnClick(object sender, RoutedEventArgs e)
+        {
+            // Variante 2: Konstruktor
+            fForeCast f = new fForeCast(this);
+            f.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            f.Width = 1200;
+            f.Height = 900;
+            
+            // Variante 1: Öffentliche Eigenschaft
+            //f.CallerWindow = this;
+
+            //this.Hide();
+            f.Show();
+        }
     }
 }

@@ -64,6 +64,17 @@
                 <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
             </StackPanel>
         </Button>
+        
+        <Button x:Name="btnForeCast"  
+                Grid.Row="3" 
+                Grid.Column="1" 
+                Click="BtnForeCast_OnClick">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="ForeCast" VerticalAlignment="Center"/>
+                <Image Source="pack://siteoforigin:,,,/Resources/Oma.jpg" Width="100" Height="100"/>
+            </StackPanel>
+        </Button>
+        
     </Grid>
     
 </Window>
