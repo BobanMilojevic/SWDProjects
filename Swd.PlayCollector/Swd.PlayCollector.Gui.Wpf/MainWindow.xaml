@@ -14,9 +14,9 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="140"/>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
@@ -57,11 +57,7 @@
             </RibbonTab>
         </Ribbon>
         
-        <DataGrid Grid.Row="1"
-                  x:Name="grdCollectionItems"
-                  Margin="10,0,10,0"/>
-        
-        <DockPanel Grid.Row="2"
+        <DockPanel Grid.Row="1"
                    Margin="10,0,10,0">
             
             <Label Content="Suche"
@@ -77,6 +73,12 @@
                      Margin="10, 10,0,10"/>
             
         </DockPanel>
+        
+        <DataGrid Grid.Row="2"
+                  x:Name="grdCollectionItems"
+                  Margin="10,0,10,0"/>
+        
+        
         
         <Grid Grid.Row="3">
             <Grid.RowDefinitions>
