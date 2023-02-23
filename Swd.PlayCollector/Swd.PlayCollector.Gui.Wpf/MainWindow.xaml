@@ -14,26 +14,50 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
-        <Menu>
-            <MenuItem Header="File">
-                <MenuItem Header="Save"/>
-            </MenuItem>
+        <Ribbon Grid.Row="0">
+            <Ribbon.ApplicationMenu>
+                <RibbonApplicationMenu>
+                    <RibbonApplicationMenuItem Header="Daten laden"/>
+                    <RibbonApplicationMenuItem Header="Info"/>
+                    <RibbonApplicationMenuItem Header="Beenden"/>
+                    
+                    <RibbonApplicationMenu.AuxiliaryPaneContent>
+                        <RibbonGallery ScrollViewer.VerticalScrollBarVisibility="Auto">
+                            <RibbonGalleryCategory MaxColumnCount="1">
+                                <RibbonGalleryItem Content="SWDeveloper" 
+                                                   MouseOverBackground="Transparent" 
+                                                   MouseOverBorderBrush="Transparent"
+                                                   CheckedBackground="Transparent"
+                                                   CheckedBorderBrush="Transparent"/>
+                                <RibbonGalleryItem >
+                                    <Hyperlink>www.wifi.at</Hyperlink>
+                                </RibbonGalleryItem>
+                            </RibbonGalleryCategory>
+                        </RibbonGallery>
+                    </RibbonApplicationMenu.AuxiliaryPaneContent>
+                </RibbonApplicationMenu>
+            </Ribbon.ApplicationMenu>
             
-        </Menu>
+            <RibbonTab Header="Ändern">
+                <RibbonGroup Header="Allgemein">
+                    <RibbonButton Label="Speichern" LargeImageSource="pack://siteoforigin:,,,/Resource/speichern.png"/>
+                    <RibbonButton Label="Bearbeiten" LargeImageSource="pack://siteoforigin:,,,/Resource/settings.png"/>
+                </RibbonGroup>
+            </RibbonTab>
+            
+        </Ribbon>
         
         <DataGrid Grid.Row="1"
-                  Grid.Column="1"
                   x:Name="grdCollectionItems"
                   Margin="10,0,10,0"/>
         
         <DockPanel Grid.Row="2"
-                   Grid.Column="1"
                    Margin="10,0,10,0">
             
             <Label Content="Suche"
@@ -49,6 +73,30 @@
                      Margin="10, 10,0,10"/>
             
         </DockPanel>
+        
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Label Grid.Row="0" Content="Ausgewähltes Collection Item" FontWeight="Bold"/>
+            
+            <StackPanel Grid.Row="1" 
+                        Orientation="Vertical" >
+                <DockPanel >
+                    <Label Content="Name"/>
+                    <Label Content="Playmobil Set 1"/>
+                </DockPanel>
+                <DockPanel >
+                    <Label Content="Erscheinungdatum"/>
+                    <Label Content="2023"/>
+                </DockPanel>
+            </StackPanel>
+            
+        </Grid>
+        
+        
     </Grid>
     
 </Window>

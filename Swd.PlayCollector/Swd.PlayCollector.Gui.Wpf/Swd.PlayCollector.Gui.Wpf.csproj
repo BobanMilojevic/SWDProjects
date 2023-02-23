@@ -20,4 +20,13 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Resource\speichern.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Resource\settings.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
