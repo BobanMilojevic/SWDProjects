@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Swd.PlayCollector.Gui.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" 
+        Title="Playcolletor" 
         Height="600" 
         Width="800"
         MinHeight="600" 
@@ -44,13 +44,17 @@
                 </RibbonApplicationMenu>
             </Ribbon.ApplicationMenu>
             
-            <RibbonTab Header="Ändern">
-                <RibbonGroup Header="Allgemein">
-                    <RibbonButton Label="Speichern" LargeImageSource="pack://siteoforigin:,,,/Resource/speichern.png"/>
+            <RibbonTab Header="Start">
+                <RibbonGroup Header="Allgemein" HorizontalContentAlignment="Center">
                     <RibbonButton Label="Bearbeiten" LargeImageSource="pack://siteoforigin:,,,/Resource/settings.png"/>
+                    <RibbonButton Label="Speichern" LargeImageSource="pack://siteoforigin:,,,/Resource/speichern.png"/>
+                </RibbonGroup>
+                <RibbonGroup Header="Neu hinzufügen" HorizontalContentAlignment="Center">
+                    <RibbonButton Label="Item" LargeImageSource="pack://siteoforigin:,,,/Resource/einfuegen.png"/>
+                    <RibbonButton Label="Lagerort" LargeImageSource="pack://siteoforigin:,,,/Resource/lagerort.png"/>
+                    <RibbonButton Label="Theme" LargeImageSource="pack://siteoforigin:,,,/Resource/theme.png"/>
                 </RibbonGroup>
             </RibbonTab>
-            
         </Ribbon>
         
         <DataGrid Grid.Row="1"

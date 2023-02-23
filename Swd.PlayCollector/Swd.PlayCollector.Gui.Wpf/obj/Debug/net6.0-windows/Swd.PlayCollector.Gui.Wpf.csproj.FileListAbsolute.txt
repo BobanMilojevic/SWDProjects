@@ -71,3 +71,6 @@ C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\D
 C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Swd.PlayCollector.Repository.pdb
 C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Resource\speichern.png
 C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Resource\settings.png
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Resource\einfuegen.png
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Resource\lagerort.png
+C:\SwDeveloper2022\SWDProjects\Swd.PlayCollector\Swd.PlayCollector.Gui.Wpf\bin\Debug\net6.0-windows\Resource\theme.png
