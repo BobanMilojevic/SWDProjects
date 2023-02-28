@@ -33,3 +33,4 @@ C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\bin\Debug\net6.0-
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\Swd.Bsp.Binding.csproj.CopyComplete
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\View\fForeCast.g.cs
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\View\fForeCast.baml
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll

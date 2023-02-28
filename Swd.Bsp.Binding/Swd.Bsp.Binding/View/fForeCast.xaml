@@ -8,8 +8,7 @@
         mc:Ignorable="d"
         Title="fForeCast" 
         Height="450" 
-        Width="800"
-        Loaded="FForeCast_OnLoaded">
+        Width="800">
     <Window.Resources>
         <model:GeneralForecastToBrushConverter x:Key="gf2Brush"/>
         <model:TemperatureConverter x:Key="TempConverter"/>
@@ -41,8 +40,7 @@
                     MinWidth="100"
                     VerticalAlignment="Center"
                     FontSize="15"
-                    Margin="4"
-                    Click="BtnShowForecast_OnClick"/>
+                    Margin="4"/>
             
             <Button Content="Load Realtime Data..."
                     x:Name="btnLoadRealtimeData"
@@ -76,7 +74,7 @@
         
         <ListBox Grid.Row="2"
                  x:Name="lstForeCasts"
-                 ItemsSource="{Binding}"
+                 ItemsSource="{Binding ForecastList}"
                  HorizontalContentAlignment="Stretch">
             
             <ListBox.ItemTemplate>

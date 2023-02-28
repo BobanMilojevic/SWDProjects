@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aiLq/vxk+KOOcl65M7F1ZC/71nWfuVvrv75ri3in5/qjyrSF6Cb+DCioXsqVQ2FxmFGzuktg36CEVzLIOEH+Qg==",
+  "dgSpecHash": "I/hUqNE6TBf6Ia1gSBGiSMA8/fTNyjl01YkGXwgcRF3WWZUhzaUFxqKhkcJnHjbWUG20OT032lar04kopLXDeQ==",
   "success": true,
   "projectFilePath": "C:\\SwDeveloper2022\\SWDProjects\\Swd.Bsp.Binding\\Swd.Bsp.Binding\\Swd.Bsp.Binding.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\communitytoolkit.mvvm\\8.0.0\\communitytoolkit.mvvm.8.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
