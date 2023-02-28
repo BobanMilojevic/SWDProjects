@@ -89,7 +89,7 @@ namespace Swd.Bsp.Binding
         private void BtnForeCast_OnClick(object sender, RoutedEventArgs e)
         {
             // Variante 2: Konstruktor
-            fForeCast f = new fForeCast(this);
+            View.fForeCast f = new View.fForeCast(this);
             f.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             f.Width = 1200;
             f.Height = 900;

@@ -28,8 +28,8 @@ C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fCollectionBinding.baml
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fTemplates.g.cs
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fTemplates.baml
-C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fForeCast.g.cs
-C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\fForeCast.baml
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\Swd.Bsp.Binding.csproj.CopyComplete
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\View\fForeCast.g.cs
+C:\SwDeveloper2022\SWDProjects\Swd.Bsp.Binding\Swd.Bsp.Binding\obj\Debug\net6.0-windows\View\fForeCast.baml

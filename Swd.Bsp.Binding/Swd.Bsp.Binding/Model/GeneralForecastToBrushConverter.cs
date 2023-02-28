@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace Swd.Bsp.Binding;
+namespace Swd.Bsp.Binding.Model;
 
 public class GeneralForecastToBrushConverter : IValueConverter
 {

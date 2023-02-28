@@ -1,17 +1,18 @@
-﻿<Window x:Class="Swd.Bsp.Binding.fForeCast"
+﻿<Window x:Class="Swd.Bsp.Binding.View.fForeCast"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Swd.Bsp.Binding"
+        xmlns:model="clr-namespace:Swd.Bsp.Binding.Model"
         mc:Ignorable="d"
         Title="fForeCast" 
         Height="450" 
         Width="800"
         Loaded="FForeCast_OnLoaded">
     <Window.Resources>
-        <local:GeneralForecastToBrushConverter x:Key="gf2Brush"/>
-        <local:TemperatureConverter x:Key="TempConverter"/>
+        <model:GeneralForecastToBrushConverter x:Key="gf2Brush"/>
+        <model:TemperatureConverter x:Key="TempConverter"/>
     </Window.Resources>
     
     <Grid Margin="10">

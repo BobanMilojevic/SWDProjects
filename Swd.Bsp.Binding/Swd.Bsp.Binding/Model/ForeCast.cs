@@ -1,4 +1,4 @@
-﻿namespace Swd.Bsp.Binding;
+﻿namespace Swd.Bsp.Binding.Model;
 
 public enum GeneralForecast
 {

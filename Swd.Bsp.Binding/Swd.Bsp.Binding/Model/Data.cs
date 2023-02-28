@@ -6,7 +6,7 @@
 //
 //    var temperatures = Temperatures.FromJson(jsonString);
 
-namespace QuickType
+namespace Swd.Bsp.Binding.Model
 {
     using System;
     using System.Collections.Generic;
@@ -197,12 +197,12 @@ namespace QuickType
 
     public partial class Temperatures
     {
-        public static Temperatures FromJson(string json) => JsonConvert.DeserializeObject<Temperatures>(json, QuickType.Converter.Settings);
+        public static Temperatures FromJson(string json) => JsonConvert.DeserializeObject<Temperatures>(json, Swd.Bsp.Binding.Model.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Temperatures self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this Temperatures self) => JsonConvert.SerializeObject(self, Swd.Bsp.Binding.Model.Converter.Settings);
     }
 
     internal static class Converter
