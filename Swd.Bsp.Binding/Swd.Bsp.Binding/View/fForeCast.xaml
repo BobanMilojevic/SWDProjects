@@ -37,6 +37,7 @@
             
             <Button Content="Show forecast..."
                     x:Name="btnShowForecast"
+                    Command="{Binding CloseCommand}"
                     MinWidth="100"
                     VerticalAlignment="Center"
                     FontSize="15"
