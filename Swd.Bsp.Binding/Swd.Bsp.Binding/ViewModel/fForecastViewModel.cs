@@ -24,6 +24,7 @@ public class fForecastViewModel : ObservableObject
     public fForecastViewModel()
     {
         IsDegree = true;
+        SelectedDays = 5;
         
         CloseCommand = new RelayCommand(CloseView);
         ShowForecastCommand = new RelayCommand(ShowForecast);
@@ -48,7 +49,11 @@ public class fForecastViewModel : ObservableObject
     public int SelectedDays
     {
         get => _selectedDays;
-        set => SetProperty(ref _selectedDays, value);
+        set
+        {
+            SetProperty(ref _selectedDays, value);
+            GetForecast();
+        }
     }
     
     public List<int> DaysForForecast 
@@ -72,7 +77,7 @@ public class fForecastViewModel : ObservableObject
 
     private void ShowForecast()
     {
-        GetForcast();
+        GetForecast();
     }
     
     private List<int> BuildDaysForForecastList(int _minDaysForForeCast, int _maxDaysForForeCast)
@@ -80,7 +85,7 @@ public class fForecastViewModel : ObservableObject
         return Enumerable.Range(_minDaysForForeCast, _maxDaysForForeCast).ToList();
     }
 
-    private void GetForcast()
+    private void GetForecast()
     {
         List<ForeCast> foreCasts = new List<ForeCast>();
 
