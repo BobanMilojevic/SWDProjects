@@ -5,14 +5,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:Swd.Bsp.Binding"
         xmlns:model="clr-namespace:Swd.Bsp.Binding.Model"
+        xmlns:vm="clr-namespace:Swd.Bsp.Binding.ViewModel"
         mc:Ignorable="d"
         Title="fForeCast" 
         Height="450" 
         Width="800">
+    
     <Window.Resources>
         <model:GeneralForecastToBrushConverter x:Key="gf2Brush"/>
         <model:TemperatureConverter x:Key="TempConverter"/>
     </Window.Resources>
+    
+    <Window.DataContext>
+        <vm:fForecastViewModel/>
+    </Window.DataContext>
     
     <Grid Margin="10">
         <Grid.RowDefinitions>
@@ -28,16 +34,16 @@
                    VerticalAlignment="Center"
                    Margin="4"/>
             
-            <ComboBox x:Name="cbxDays"
-                      Width="50"
+            <ComboBox Width="50"
                       VerticalAlignment="Center"
                       Margin="4"
                       SelectedIndex="4"
-                      ItemsSource="{Binding DaysForForecast}"/>
+                      ItemsSource="{Binding DaysForForecast}"
+                      SelectedValue="{Binding SelectedDays}"/>
             
             <Button Content="Show forecast..."
                     x:Name="btnShowForecast"
-                    Command="{Binding CloseCommand}"
+                    Command="{Binding ShowForecastCommand}"
                     MinWidth="100"
                     VerticalAlignment="Center"
                     FontSize="15"
@@ -48,8 +54,7 @@
                     MinWidth="100"
                     VerticalAlignment="Center"
                     FontSize="15"
-                    Margin="4"
-                    Click="BtnLoadRealtimeData_OnClick"/>
+                    Margin="4"/>
         </StackPanel>
         
         <StackPanel Grid.Row="1"
@@ -74,8 +79,7 @@
         </StackPanel>
         
         <ListBox Grid.Row="2"
-                 x:Name="lstForeCasts"
-                 ItemsSource="{Binding ForecastList}"
+                 ItemsSource="{Binding Path = ForecastList}"
                  HorizontalContentAlignment="Stretch">
             
             <ListBox.ItemTemplate>
@@ -103,7 +107,7 @@
                                 <TextBlock.Text>
                                     <MultiBinding StringFormat="Low: {0:N2}" Converter="{StaticResource TempConverter}">
                                         <Binding Path="TemperatureLow"/>
-                                        <Binding Path="IsDegree" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}"/>
+                                        <Binding Path="DataContext.IsDegree" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}"/>
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
@@ -114,7 +118,7 @@
                                 <TextBlock.Text>
                                     <MultiBinding StringFormat="High: {0:N2}" Converter="{StaticResource TempConverter}">
                                         <Binding Path="TemperatureHigh"/>
-                                        <Binding Path="IsDegree" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}"/>
+                                        <Binding Path="DataContext.IsDegree" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}"/>
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
