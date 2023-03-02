@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Swd.PlayCollector.GUI.fMain"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResizeWithGrip">
     
     <Grid>
         <Grid.RowDefinitions>
@@ -32,7 +36,7 @@
                     Orientation="Vertical">
             
             <TextBox Text="search..."/>
-            <ListBox VerticalContentAlignment="Stretch"/>
+            <ListBox VerticalAlignment="Stretch"/>
         </StackPanel>
         
         
@@ -59,7 +63,7 @@
                         <ColumnDefinition Width="25*"/>
                     </Grid.ColumnDefinitions>
                     
-                    <Label Grid.Row="0" Grid.Column="0" Content="Id"/>
+                    <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="Id"/>
                     <Label Grid.Row="1" Grid.Column="0" Content="Name"/>
                     <Label Grid.Row="2" Grid.Column="0" Content="SetNumber"/>
                     <Label Grid.Row="3" Grid.Column="0" Content="Theme"/>
@@ -67,11 +71,10 @@
                     <Label Grid.Row="5" Grid.Column="0" Content="Releaseyear"/>
                     <Label Grid.Row="6" Grid.Column="0" Content="Price (EUR)"/>
                     
-                    <TextBox Grid.Row="0" Grid.Column="1"/>
                     <TextBox Grid.Row="1" Grid.Column="1"/>
                     <TextBox Grid.Row="2" Grid.Column="1"/>
-                    <TextBox Grid.Row="3" Grid.Column="1"/>
-                    <TextBox Grid.Row="4" Grid.Column="1"/>
+                    <ComboBox Grid.Row="3" Grid.Column="1"/>
+                    <ComboBox Grid.Row="4" Grid.Column="1"/>
                     <TextBox Grid.Row="5" Grid.Column="1"/>
                     <TextBox Grid.Row="6" Grid.Column="1"/>
                 </Grid>
