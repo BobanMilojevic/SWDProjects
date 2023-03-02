@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Navigation;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Swd.Bsp.Binding.Model;
@@ -14,25 +15,21 @@ public class fForecastViewModel : ObservableObject
     // Fields
     private int _minDaysForForeCast = 1;
     private int _maxDaysForForeCast = 10;
+    private List<ForeCast> _forecastList;
+    private bool _isDegree;
+    private List<int> _daysForForecast;
+    private int _selectedDays;
+
 
     public fForecastViewModel()
     {
-        this.IsDegree = true;
-
+        IsDegree = true;
+        
         CloseCommand = new RelayCommand(CloseView);
+        ShowForecastCommand = new RelayCommand(ShowForecast);
         
         DaysForForecast = BuildDaysForForecastList(_minDaysForForeCast, _maxDaysForForeCast);
     }
-
-    private void CloseView()
-    {
-        MessageBox.Show("Close");
-    }
-
-    // Properties
-    public bool IsDegree { get; set; }
-    public List<int> DaysForForecast { get; set; }
-    public List<ForeCast> ForecastList { get; set; }
 
     
     //Commands
@@ -40,6 +37,43 @@ public class fForecastViewModel : ObservableObject
     public ICommand LoadForecastCommand { get; }
     public ICommand CloseCommand { get; }
     
+
+    // Properties
+    public bool IsDegree
+    {
+        get => _isDegree;
+        set => SetProperty(ref _isDegree, value);
+    }
+
+    public int SelectedDays
+    {
+        get => _selectedDays;
+        set => SetProperty(ref _selectedDays, value);
+    }
+    
+    public List<int> DaysForForecast 
+    { 
+        get => _daysForForecast; 
+        set => SetProperty(ref _daysForForecast, value);
+    }
+
+    public List<ForeCast> ForecastList
+    {
+        get => _forecastList;
+        set => SetProperty(ref _forecastList, value);
+    }
+
+    
+    // Methodes
+    private void CloseView()
+    {
+        MessageBox.Show("Close");
+    }
+
+    private void ShowForecast()
+    {
+        GetForcast();
+    }
     
     private List<int> BuildDaysForForecastList(int _minDaysForForeCast, int _maxDaysForForeCast)
     {
@@ -50,8 +84,7 @@ public class fForecastViewModel : ObservableObject
     {
         List<ForeCast> foreCasts = new List<ForeCast>();
 
-        //int daysFoForeCast = (int)this.cbxDays.SelectedItem;
-        int daysFoForeCast = 5;
+        int daysFoForeCast = SelectedDays;
         Random random = new Random();
         
         for (int i = 0; i < daysFoForeCast; i++)
